@@ -12,8 +12,15 @@
     <div class="container-fluid">
         <div class="row mt-2">
             <div class="col-md-6 mx-auto">
+                <div class="card mb-3">
+                    <div class="card-body text-center">
+                        <input type="button" id="hideme" class="btn btn-primary" value="Hide">
+                        <input type="button" id="showme" class="btn btn-primary" value="Show">
+                        <input type="button" id="hide_show" class="btn btn-primary" value="Hide And Show Toggle">
+                    </div>
+                </div>
 
-                <div class="card bg-secondary">
+                <div class="card bg-secondary" id="mycard">
                     <div class="card-body">
                         <h3>Hide and Show</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempora autem similique nam, repudiandae dolor quidem architecto laborum unde dignissimos eaque nihil quibusdam adipisci quia explicabo minus ducimus voluptatum sunt?</p>
@@ -28,6 +35,20 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
+<script>
+    $(document).ready(function(){
+        $("#hideme").click(function(){
+            $("#mycard").hide();
+        });
+        $("#showme").click(function(){
+            $("#mycard").show();
+        });
+        $("#hide_show").click(function(){
+            $("#mycard").toggle();
+        });
 
+
+    });
+</script>
 </body>
 </html>
